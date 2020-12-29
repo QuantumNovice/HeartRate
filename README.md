@@ -12,6 +12,9 @@ An opensource project that measures real time heart rate.
 * Fixed Heart Beat Sensor 
 * I have a dedicated server for IoT for CPU/GPU intensive tasks (The house of FUTURE!!)
 
+## Installation
+* Grab this project from git
+
 ## How Does it Work?
 ![heart](bonjour.png)
 
