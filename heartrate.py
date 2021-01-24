@@ -1,13 +1,10 @@
+import statistics
+
 import cv2
 import numpy as np
-import matplotlib.pyplot as plt
-
-import pickle
-import statistics
 
 from tqdm import tqdm
 
-import requests
 
 
 class HeartBeat:
@@ -58,9 +55,9 @@ class HeartBeat:
 
         self.brightness /= max(self.brightness)
 
-        delta_time = 1 / self.framerate
+        # delta_time = 1 / self.framerate
 
-        time_scale = np.arange(0, self.frames / self.framerate, delta_time)
+        # time_scale = np.arange(0, self.frames / self.framerate, delta_time)
 
         locs = np.diff(self.brightness)
 
@@ -68,7 +65,7 @@ class HeartBeat:
         locs = locs.clip(clip_off, 1)
 
         locii = np.where(locs != clip_off)
-        time = locii[0] / self.framerate
+        # time = locii[0] / self.framerate
 
         locii = locii[0]
         batch_size = 3
@@ -85,6 +82,10 @@ class HeartBeat:
 
 
 if __name__ == "__main__":
+    import matplotlib.pyplot as plt
+    import requests
+
+    import pickle
     b = HeartBeat("VID_20201025_204835.3gp")
 
     # b.frames = 50

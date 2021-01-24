@@ -1,10 +1,11 @@
+import statistics
+
 from heartrate import HeartBeat
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-import pickle
-import statistics
+
 
 from tqdm import tqdm
 
@@ -64,7 +65,7 @@ class DroidBeat(HeartBeat):
 
         delta_time = 1 / self.framerate
 
-        time_scale = np.arange(0, self.frames / self.framerate, delta_time)
+        # time_scale = np.arange(0, self.frames / self.framerate, delta_time)
 
         # print(time_scale)
 
@@ -78,7 +79,7 @@ class DroidBeat(HeartBeat):
         # plt.plot(locs)
 
         locii = np.where(locs != clip_off)
-        time = locii[0] / self.framerate
+        # time = locii[0] / self.framerate
         # print(locii[0])
 
         locii = locii[0]
@@ -98,6 +99,8 @@ class DroidBeat(HeartBeat):
 
 
 if __name__ == '__main__':
+    import pickle
+
     b = DroidBeat("http://192.168.10.8:4747/video")
     b.frames = 200
 
