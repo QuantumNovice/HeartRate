@@ -1,6 +1,6 @@
 
 
-![](hear4t.png)
+![](img/hear4t.png)
 
 # CV-HeartRate
 
@@ -16,7 +16,7 @@ An opensource project that measures real time heart rate.
 * Grab this project from git
 
 ## How Does it Work?
-![heart](bonjour.png)
+![heart](img/bonjour.png)
 
 **Step 1:**
 Assumptions:
@@ -64,7 +64,7 @@ print(beat)
 
 How it sees your heart beat.
 
-![heart](heart.png)
+![heart](img/heart.png)
 
 # Camdroid
 
